@@ -77,7 +77,7 @@ This repository will describe how to set up Thanos across multiple Prometheus se
 
 **⮕** Now let's add thanos as data source for grafana
 
-`kubectl describe pod <thanos query pod name> -n thanos` **⮕** <thanos query pod name>:9090 will be the pod that queries our object storage. You can use it as a data source for grafana.
+`kubectl describe pod <thanos query pod name> -n thanos` **⮕** `<thanos query pod name>`:9090 will be the pod that queries our object storage. You can use it as a data source for grafana.
 
 ### Let's do a similar approach on the second cluster (remember to switch contexts)
 
