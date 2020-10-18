@@ -49,7 +49,7 @@ This repository will describe how to set up Thanos across multiple Prometheus se
 
 **⮕** Install the kube-prometheus-stack
 
-`helm install k1-prom prometheus-community/kube-prometheus-stack -f prometheus-thanos-values.yaml`
+`helm install k1-prom prometheus-community/kube-prometheus-stack -f values/prometheus-thanos-values.yaml`
 
 ***note: feel free to modify the `prometheus-thanos-values.yaml` file. The file provided in this repository will make grafana public accessible with default password, so make sure to change it.***
 
@@ -91,7 +91,7 @@ This repository will describe how to set up Thanos across multiple Prometheus se
 
 **⮕** Install the kube-prometheus-stack
 
-`helm install k2-prom prometheus-community/kube-prometheus-stack -f prometheus-thanos-values.yaml`
+`helm install k2-prom prometheus-community/kube-prometheus-stack -f values/prometheus-thanos-values.yaml`
 
 ***note: I opted to not install ingress-nginx on the second cluster because I'm setting grafana enable to `false`*** 
 ***note: I opted to not create the manifest files on the second cluster because I'm only using thanos-querier in the first cluster to act as data source for grafana*** 
