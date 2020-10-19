@@ -65,8 +65,6 @@ This repository will describe how to set up Thanos across multiple Prometheus se
 
 `kubectl create namespace thanos`
 
-`cd manifests`
-
 **⮕** Since the querier will be in the namespace `thanos` we need to create a secret in this namespace, so it can access the object storage
 
 `kubectl create secret generic thanos-storage-config --from-file=thanos.yaml=thanos-storage-config-s3.yaml --namespace thanos`
